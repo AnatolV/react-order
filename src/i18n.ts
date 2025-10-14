@@ -13,7 +13,12 @@ i18n
     .init({
         // Язык по умолчанию
         fallbackLng: 'uk',
-        debug: true,
+        debug: false,
+        backend: {
+            // Указываем путь к файлам переводов, используя базовый URL проекта
+            // import.meta.env.BASE_URL будет равно '/react-order/' после сборки
+            loadPath: `${import.meta.env.BASE_URL}locales/{{lng}}/translation.json`,
+        },
         // Настройки для LanguageDetector
         detection: {
             // Порядок определения: localStorage -> navigator
