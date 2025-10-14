@@ -65,7 +65,7 @@ const AddressDataProvider: FC<IProps> = ({children}) => {
     /**
      * уровень на котором произошла ошибка*/
     const [error, setError] = useState<TLevel | "">("");
-
+    const baseUrl = import.meta.env.BASE_URL;
     // State for raw operator data when emulating
     const [operatorRawData, setOperatorRawData] = useState<IAddresses | null>(null);
 
@@ -80,7 +80,7 @@ const AddressDataProvider: FC<IProps> = ({children}) => {
     useEffect(() => {
         if (EMULATION_MODE && selected.operators) {
             const operatorId = selected.operators;
-            fetch(`/api/operators/${operatorId}/regions/index.json`)
+            fetch(`${baseUrl}api/operators/${operatorId}/regions/index.json`)
                 .then(response => {
                     if (response.ok) {
                         return response.json();
@@ -104,7 +104,7 @@ const AddressDataProvider: FC<IProps> = ({children}) => {
         try {
             let responseData: any;
             if (level === 'operators') {
-                const res = await fetch('/api/operators/index.json');
+                const res = await fetch('${baseUrl}api/operators/index.json');
                 const operatorData: any[] = await res.json();
                 responseData = operatorData.reduce((acc, item) => {
                     if (item.id) {
@@ -113,7 +113,7 @@ const AddressDataProvider: FC<IProps> = ({children}) => {
                     return acc;
                 }, {});
             } else if (level === 'regions') {
-                const res = await fetch(`/api/operators/${selected.operators}/index.json`);
+                const res = await fetch(`${baseUrl}api/operators/${selected.operators}/index.json`);
                 const operatorData: any[] = await res.json();
                 responseData = operatorData.reduce((acc, item) => {
                     if (item.id) {
@@ -129,7 +129,7 @@ const AddressDataProvider: FC<IProps> = ({children}) => {
                         responseData = operatorRawData[regionKey].list;
                     }
                 } else {
-                    const res = await fetch(`/api/operators/${selected.operators}/${selected.regions}/index.json`);
+                    const res = await fetch(`${baseUrl}api/operators/${selected.operators}/${selected.regions}/index.json`);
                     const operatorData: any[] = await res.json();
                     responseData = operatorData.reduce((acc, item) => {
                         if (item.id) {
@@ -149,7 +149,7 @@ const AddressDataProvider: FC<IProps> = ({children}) => {
                         }
                     }
                 } else {
-                    const res = await fetch(`/api/operators/${selected.operators}/${selected.regions}/${selected.cities}/index.json`);
+                    const res = await fetch(`${baseUrl}api/operators/${selected.operators}/${selected.regions}/${selected.cities}/index.json`);
                     const operatorData: any[] = await res.json();
                     responseData = operatorData
                         .reduce((acc, item) => {
@@ -169,7 +169,7 @@ const AddressDataProvider: FC<IProps> = ({children}) => {
         } finally {
             setIsLoading(prev => ({...prev, [level]: false}));
         }
-    }, [operatorRawData, selected.operators, selected.regions, selected.cities]);
+    }, [operatorRawData, selected.operators, selected.regions, selected.cities, baseUrl]);
 
     /**
      * загрузка данных, если ранее уже было выбрано и сохранено в localStorage

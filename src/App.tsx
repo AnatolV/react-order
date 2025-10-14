@@ -12,9 +12,10 @@ import AddressDataProvider from "./context/AddressDataContext.tsx";
 import "./App.css"
 const App: React.FC = () => {
     const [state, dispatch] = useReducer(reducer, initialState);
+    const baseUrl = import.meta.env.BASE_URL;
 
     useEffect(() => {
-        fetch('/api/order/products.json')
+        fetch(`${baseUrl}api/order/products.json`)
             .then(response => response.json())
             .then((data: StoreData) => {
                 dispatch({type: SET_DATA, payload: data});
