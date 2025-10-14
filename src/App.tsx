@@ -13,7 +13,6 @@ import "./App.css"
 const App: React.FC = () => {
     const [state, dispatch] = useReducer(reducer, initialState);
     const baseUrl = import.meta.env.BASE_URL;
-
     useEffect(() => {
         fetch(`${baseUrl}api/order/products.json`)
             .then(response => response.json())

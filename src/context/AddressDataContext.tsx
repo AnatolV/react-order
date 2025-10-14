@@ -104,7 +104,7 @@ const AddressDataProvider: FC<IProps> = ({children}) => {
         try {
             let responseData: any;
             if (level === 'operators') {
-                const res = await fetch('${baseUrl}api/operators/index.json');
+                const res = await fetch(`${baseUrl}api/operators/index.json`);
                 const operatorData: any[] = await res.json();
                 responseData = operatorData.reduce((acc, item) => {
                     if (item.id) {
