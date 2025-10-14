@@ -2,6 +2,7 @@
   "name": "react-ts",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://AnatolV.github.io/react-order",
   "type": "module",
   "scripts": {
     "dev": "vite",
