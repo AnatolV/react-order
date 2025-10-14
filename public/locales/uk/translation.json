@@ -23,5 +23,8 @@
   "addressSelection.address": "Виберіть адресу",
   "addressSelection.error": "адреса відсутня",
   "addressSelection.searchPlaceholder": "Пошук...",
-  "addressSelection.nothingFoundText": "Нічого не знайдено"
+  "addressSelection.nothingFoundText": "Нічого не знайдено",
+  "language.en": "Англійська",
+  "language.ru": "Російська",
+  "language.uk": "Українська"
 }
