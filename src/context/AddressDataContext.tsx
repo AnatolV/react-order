@@ -192,19 +192,18 @@ const AddressDataProvider: FC<IProps> = ({children}) => {
 
 
     const handleSelect = (level: TLevel, value: string) => {
-        const newSelected = {...selected, [level]: value};
         // Reset dependent fields
         if (level === 'operators') {
-            setSelected(prev => ({...prev, regions: null, cities: null, addresses: null}));
+            setSelected(prev => ({...prev, operators: value, regions: null, cities: null, addresses: null}));
             setData(prev => ({...prev, regions: null, cities: null, addresses: null}));
         } else if (level === 'regions') {
-            setSelected(prev => ({...prev, cities: null, addresses: null}));
+            setSelected(prev => ({...prev, regions: value, cities: null, addresses: null}));
             setData(prev => ({...prev, cities: null, addresses: null}));
         } else if (level === 'cities') {
-            setSelected(prev => ({...prev, addresses: null}));
+            setSelected(prev => ({...prev, cities: value, addresses: null}));
             setData(prev => ({...prev, addresses: null}));
         }
-        setSelected(newSelected);
+        // setSelected(newSelected);
         setIsOpened(prev => ({...prev, [level]: false}));
     };
 
