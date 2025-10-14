@@ -1,0 +1,27 @@
+
+{
+  "currency": "UAH",
+  "productList.title": "Your Order",
+  "productList.total": "Total",
+  "userForm.title": "Customer Details",
+  "userForm.name": "Full Name",
+  "userForm.email": "Email Address",
+  "userForm.phone": "Phone",
+  "userForm.address": "Shipping Address",
+  "userForm.submit": "Place Order",
+  "userForm.subtotal": "Amount for goods",
+  "userForm.total": "Total",
+  "userForm.deliveryInfo": "Delivery cost",
+  "userForm.alert": "Thank you for your order, {{name}}!",
+  "off": "OFF",
+  "remove": "remove",
+  "buttonMap.open": "Open Map",
+  "modalMap.list": "List of post offices",
+  "addressSelection.operator": "Select an operator",
+  "addressSelection.region": "Select a region",
+  "addressSelection.city": "Select a city",
+  "addressSelection.address": "Select an address",
+  "addressSelection.error": "No address",
+  "addressSelection.searchPlaceholder": "Searching...",
+  "addressSelection.nothingFoundText": "Nothing found"
+}

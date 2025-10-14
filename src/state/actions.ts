@@ -1,0 +1,3 @@
+export const SET_DATA = 'SET_DATA';
+export const UPDATE_QUANTITY = 'UPDATE_QUANTITY';
+export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';

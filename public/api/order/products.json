@@ -1,0 +1,55 @@
+{
+  "products": [
+    {
+      "id": "prod-001",
+      "name": {
+        "en": "Tall pine",
+        "ru": "Сосна высокая",
+        "uk": "Сосна висока"
+      },
+      "product_url": "",
+      "current_price": 79.99,
+      "original_price": 99.99,
+      "quantity": 1,
+      "discount_percentage": 20,
+      "image_url": "/api/order/Screenshot_1.jpg",
+      "availableQuantity": 3
+    },
+    {
+      "id": "prod-002",
+      "name": {
+        "en": "Small spruce",
+        "ru": "Ель маленькая",
+        "uk": "Ялина маленька"
+      },
+      "current_price": 149.50,
+      "original_price": 149.50,
+      "quantity": 2,
+      "discount_percentage": 0,
+      "image_url": "/api/order/Screenshot_2.jpg",
+      "availableQuantity": 2
+    },
+    {
+      "id": "prod-003",
+      "name": {
+        "en": "Lush pine",
+        "ru": "Сосна пышная",
+        "uk": "Сосна пишна"
+      },
+      "current_price": 119.00,
+      "original_price": 159.00,
+      "quantity": 1,
+      "discount_percentage": 25,
+      "image_url": "/api/order/Screenshot_3.jpg",
+      "availableQuantity": 9999
+    }
+  ],
+  "delivery": {
+    "name": {
+      "en": "Delivery",
+      "ru": "Доставка",
+      "uk": "Доставка"
+    },
+    "price": 109
+  }
+}

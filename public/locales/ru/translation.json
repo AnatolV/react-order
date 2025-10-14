@@ -1,0 +1,27 @@
+
+{
+  "currency": "грн",
+  "productList.title": "Ваш заказ",
+  "productList.total": "Итого",
+  "userForm.title": "Данные покупателя",
+  "userForm.name": "Полное имя",
+  "userForm.email": "Электронная почта",
+  "userForm.phone": "Телефон",
+  "userForm.address": "Адрес доставки",
+  "userForm.submit": "Оформить заказ",
+  "userForm.subtotal": "Сумма за товары",
+  "userForm.total": "Всего",
+  "userForm.deliveryInfo": "Стоимость доставки",
+  "userForm.alert": "Спасибо за ваш заказ, {{name}}!",
+  "off": "СКИДКА",
+  "remove": "удалить",
+  "buttonMap.open": "Открыть карту",
+  "modalMap.list": "Список отделений",
+  "addressSelection.operator": "Выберите оператора",
+  "addressSelection.region": "Выберите область",
+  "addressSelection.city": "Выберите город",
+  "addressSelection.address": "Выберите адрес",
+  "addressSelection.error": "адрес отсутствует",
+  "addressSelection.searchPlaceholder": "Поиск...",
+  "addressSelection.nothingFoundText": "Ничего не найдено"
+}

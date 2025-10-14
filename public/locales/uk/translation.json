@@ -1,0 +1,27 @@
+
+{
+  "currency": "грн",
+  "productList.title": "Ваше замовлення",
+  "productList.total": "Разом",
+  "userForm.title": "Дані покупця",
+  "userForm.name": "Повне ім'я",
+  "userForm.email": "Електронна пошта",
+  "userForm.phone": "Телефон",
+  "userForm.address": "Адреса доставки",
+  "userForm.submit": "Оформити замовлення",
+  "userForm.subtotal": "Сума за товари",
+  "userForm.total": "Всього",
+  "userForm.deliveryInfo": "Вартість доставки",
+  "userForm.alert": "Дякую за ваше замовлення, {{name}}!",
+  "off": "ЗНИЖКА",
+  "remove": "видалити",
+  "buttonMap.open": "Відкрити мапу",
+  "modalMap.list" : "Список відділень",
+  "addressSelection.operator": "Виберіть оператора",
+  "addressSelection.region": "Виберіть область",
+  "addressSelection.city": "Виберіть місто",
+  "addressSelection.address": "Виберіть адресу",
+  "addressSelection.error": "адреса відсутня",
+  "addressSelection.searchPlaceholder": "Пошук...",
+  "addressSelection.nothingFoundText": "Нічого не знайдено"
+}
