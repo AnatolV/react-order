@@ -192,6 +192,7 @@ const AddressDataProvider: FC<IProps> = ({children}) => {
 
 
     const handleSelect = (level: TLevel, value: string) => {
+        console.log([level, value]);
         // Reset dependent fields
         if (level === 'operators') {
             setSelected(prev => ({...prev, operators: value, regions: null, cities: null, addresses: null}));

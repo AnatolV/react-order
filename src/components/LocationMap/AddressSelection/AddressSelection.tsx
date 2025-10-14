@@ -29,7 +29,7 @@ const AddressSelection = () => {
 
     return (
         <>
-            <div className='flex flex-col space-y-4'>
+            <div className='flex flex-col space-y-2'>
                 <CustomSelect {...commonSelectProps}
                     options={data.operators}
                     level={'operators'}

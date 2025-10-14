@@ -17,7 +17,7 @@ const CustomSelect = (props: TCustomSelectProps) => {
     const {isLoading, level, isVisible, isOpen, isSearchable, searchPlaceholder, nothingFoundText} = props;
 
     return (
-        <div className={`font-normal relative w-full  mt-[10px] cursor-pointer align-middle text-gray-50 ${isVisible ? 'inline-block z-1' : 'hidden'} ${isOpen ? 'z-10' : ''}`}>
+        <div className={`font-normal relative w-full  mt-[5px] cursor-pointer align-middle text-gray-50 ${isVisible ? 'inline-block z-1' : 'hidden'} ${isOpen ? 'z-10' : ''}`}>
             <button type="button"
                 className="text-[15px] font-bold leading-loose relative w-full h-[40px] py-[5px] pr-[45px] pl-[10px] cursor-pointer text-left align-baseline text-gray-950 border border-solid border-gray-700 rounded-md bg-gradient-to-b from-gray-50 to-gray-300 [text-shadow:1px_1px_var(--color-gray-50)]"
                 onClick={handleToggle}
@@ -31,7 +31,7 @@ const CustomSelect = (props: TCustomSelectProps) => {
                 </div>
             </button>
             {isOpen && (
-                <div className="w-full bg-gray-50 absolute mt-[10px] rounded-md border border-gray-700 z-10">
+                <div className="w-full bg-gray-50 absolute mt-[5px] rounded-md border border-gray-700 z-10">
                     {isSearchable && (
                         <Field.Root>
                             <Field.Control
