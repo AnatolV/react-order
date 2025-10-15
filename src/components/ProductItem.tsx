@@ -15,6 +15,7 @@ const ProductItem: React.FC<ProductItemProps> = ({product}) => {
     const {i18n, t} = useTranslation();
     const {dispatch} = useStoreData();
     const [inputValue, setInputValue] = useState(product.quantity.toString());
+    const [tooltipVisible, setTooltipVisible] = useState(false);
     const debounceTimeout = useRef<number | null>(null);
     const isInitialMount = useRef(true);
 
@@ -76,6 +77,16 @@ const ProductItem: React.FC<ProductItemProps> = ({product}) => {
     };
 
     const handleIncrease = () => {
+        if (tooltipVisible) return;
+
+        if (product.quantity >= product.availableQuantity) {
+            setTooltipVisible(true);
+            setTimeout(() => {
+                setTooltipVisible(false);
+            }, 3000);
+            return;
+        }
+
         const newQuantity = Math.min(product.quantity + 1, product.availableQuantity);
         dispatch({type: UPDATE_QUANTITY, payload: {productId: product.id, quantity: newQuantity}});
     };
@@ -121,7 +132,16 @@ const ProductItem: React.FC<ProductItemProps> = ({product}) => {
                     </div>
                 </div>
                 <div className="mt-1 flex flex-1 items-end justify-between text-sm md:text-lg">
-                    <div className="flex items-stretch">
+                    <div className="relative flex items-stretch">
+                         {tooltipVisible && (
+                            <div className="absolute -top-7 left-1/2 -translate-x-1/2 z-10 w-max">
+                                <div className="relative bg-gray-800 text-white text-xs rounded py-1 px-2">
+                                    {t('product.maxQuantityReached')}
+                                    <div
+                                        className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-x-4 border-x-transparent border-t-4 border-t-gray-800"></div>
+                                </div>
+                            </div>
+                         )}
                         <button
                             type="button"
                             onClick={handleDecrease}

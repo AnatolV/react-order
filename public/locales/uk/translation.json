@@ -26,5 +26,6 @@
   "addressSelection.nothingFoundText": "Нічого не знайдено",
   "language.en": "Англійська",
   "language.ru": "Російська",
-  "language.uk": "Українська"
+  "language.uk": "Українська",
+  "product.maxQuantityReached": "Вибрано максимальну кількість товару"
 }

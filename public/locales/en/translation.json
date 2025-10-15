@@ -26,5 +26,6 @@
   "addressSelection.nothingFoundText": "Nothing found",
   "language.en": "English",
   "language.ru": "Russian",
-  "language.uk": "Ukrainian"
+  "language.uk": "Ukrainian",
+  "product.maxQuantityReached": "Maximum quantity selected"
 }
