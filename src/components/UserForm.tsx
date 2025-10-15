@@ -110,47 +110,43 @@ const UserForm: React.FC = () => {
             {/* Form Section */}
             <div className="border-t border-gray-200 bg-gray-50 p-6">
                 <form onSubmit={handleSubmit} className="space-y-4">
-                    <div>
+                    <div className="relative">
+                        <input type="text" id="name"
+                               className="block bg-white px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                               placeholder=" "
+                               name="name"
+                               autoComplete="on"
+                               value={user.name}
+                               onChange={handleChange}
+                               required/>
                         <label htmlFor="name"
-                               className="mb-1 block text-sm font-medium text-gray-700">{t('userForm.name')}</label>
-                        <input
-                            type="text"
-                            className="block w-full rounded-md border-gray-300 p-2 shadow-sm focus:border-gray-500 focus:ring-gray-500 sm:text-sm"
-                            id="name"
-                            name="name"
-                            autoComplete="name"
-                            value={user.name}
-                            onChange={handleChange}
-                            required
-                        />
+                               className="absolute text-sm text-gray-500  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white  px-2 peer-focus:px-2 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1 rounded-sm">{t('userForm.name')}</label>
                     </div>
-                    <div>
+                    <div className="relative">
+                        <input type="tel" id="phone"
+                               className="block bg-white px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                               placeholder=" "
+                               name="phone"
+                               autoComplete="on"
+                               value={user.phone}
+                               onChange={handleChange}
+                               required/>
                         <label htmlFor="phone"
-                               className="mb-1 block text-sm font-medium text-gray-700">{t('userForm.phone')}</label>
-                        <input
-                            type="tel"
-                            className="block w-full rounded-md border-gray-300 p-2 shadow-sm focus:border-gray-500 focus:ring-gray-500 sm:text-sm"
-                            id="phone"
-                            name="phone"
-                            autoComplete="tel"
-                            value={user.phone}
-                            onChange={handleChange}
-                            required
-                        />
+                               className="absolute text-sm text-gray-500  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white  px-2 peer-focus:px-2 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1 rounded-sm">{t('userForm.phone')}</label>
+
                     </div>
-                    <div>
+                    <div className="relative">
+                        <input type="email" id="email"
+                               className="block bg-white px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                               placeholder=" "
+                               name="email"
+                               autoComplete="on"
+                               value={user.email}
+                               onChange={handleChange}
+                               required/>
                         <label htmlFor="email"
-                               className="mb-1 block text-sm font-medium text-gray-700">{t('userForm.email')}</label>
-                        <input
-                            type="email"
-                            className="block w-full rounded-md border-gray-300 p-2 shadow-sm focus:border-gray-500 focus:ring-gray-500 sm:text-sm"
-                            id="email"
-                            name="email"
-                            autoComplete="on"
-                            value={user.email}
-                            onChange={handleChange}
-                            required
-                        />
+                               className="absolute text-sm text-gray-500  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white  px-2 peer-focus:px-2 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1 rounded-sm">{t('userForm.email')}</label>
+
                     </div>
                     <div>
                         <AddressSelection/>
